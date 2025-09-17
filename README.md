@@ -1,4 +1,4 @@
-# Sentinel-1 Radar Processing and Export using Google Earth Engine
+Impact of Soil Quality on Crop Growth Analysis by Using Python
 
 This Google Earth Engine (GEE) script processes Sentinel-1 radar images (VV and VH polarizations) over a 100 km × 100 km area centered around Nagpur, India. It applies the **Refined Lee Speckle Filter** to reduce noise, creates median composites for multiple date ranges, and exports the filtered images as GeoTIFFs to Google Drive.
 
