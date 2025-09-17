@@ -1,63 +1,69 @@
-### Impact of Soil Quality on Crop Growth Analysis by Using Python ##
+# 🌱 Impact of Soil Quality on Crop Growth Analysis  
 
-This Google Earth Engine (GEE) script processes Sentinel-1 radar images (VV and VH polarizations) over a 100 km × 100 km area centered around Nagpur, India. It applies the **Refined Lee Speckle Filter** to reduce noise, creates median composites for multiple date ranges, and exports the filtered images as GeoTIFFs to Google Drive.
+Agriculture is the cornerstone of many economies, ensuring food security and sustaining livelihoods. A fundamental determinant of agricultural productivity lies in understanding the influence of environmental factors on crop growth.  
 
----
-
-## 📍 Area of Interest (AOI)
-
-- **Center**: `[79.05837, 21.033656]` (Nagpur region)
-- **Extent**: 100 km × 100 km (buffer of 50 km in each direction)
+This project — **Impact of Soil Quality on Crop Growth Analysis** — investigates the relationship between **soil quality** and **weather conditions** with crop growth and yield.  
 
 ---
 
-## 📅 Date Ranges Processed
+## 📌 Project Overview  
 
-The script processes Sentinel-1 images for the following date ranges:
+- **Soil parameters**: nutrient content, pH, and other soil quality indicators.  
+- **Weather variables**: temperature, humidity, and rainfall.  
+- **Goal**: uncover patterns and insights that can improve crop classification and selection across diverse regions.  
 
-- 2019-12-02 to 2019-12-07  
-- 2019-12-08 to 2019-12-11  
-- 2019-12-12 to 2019-12-20  
-- 2019-12-22 to 2019-12-25  
-- 2019-12-26 to 2020-12-31  
-
----
-
-## 🔧 Workflow Summary
-
-1. Define the AOI using a buffer around a central point.
-2. Filter Sentinel-1 ImageCollection for VV and VH bands.
-3. Compute the **median composite** for each date range.
-4. Apply the **Refined Lee Speckle Filter** to reduce noise.
-5. Convert filtered output to decibels (dB).
-6. Export each processed image (VV and VH) to Google Drive as GeoTIFF.
+The analysis aims to guide **farmers** and **policymakers** in:  
+✔ Optimizing crop selection  
+✔ Improving agricultural outcomes  
+✔ Promoting sustainable land management  
+✔ Adapting practices to changing climate conditions  
 
 ---
 
-## 🛰️ Input Dataset
+## 🔑 Project Objectives  
 
-- **Sentinel-1 Ground Range Detected (GRD)**:  
-  `COPERNICUS/S1_GRD`
+The project is structured into **three main phases**:  
 
----
+1. **Data Preprocessing**  
+   - Cleaning, organizing, and standardizing soil and weather datasets.  
+   - Ensuring accuracy and reliability of the data.  
 
-## 📤 Output
+2. **Data Analysis**  
+   - Applying statistical and machine learning techniques.  
+   - Exploring correlations and deriving meaningful relationships between soil/weather variables and crop types.  
 
-For each date range:
-- 1 GeoTIFF file for filtered **VV** band
-- 1 GeoTIFF file for filtered **VH** band
-
-Each image is:
-- **Scale**: 10 meters
-- **CRS**: EPSG:4326
-- **Export Folder**:  
-  - `Nagpur_vv` (for VV images)  
-  - `Nagpur_vh` (for VH images)  
+3. **Data Visualization**  
+   - Representing results using graphs, maps, and charts.  
+   - Enabling intuitive understanding of complex relationships.  
 
 ---
 
-## 📁 File Structure
+## 🛠️ Tech Stack  
 
-```plaintext
-sentinel1_refined_lee_export.js  # GEE JavaScript code
-README.md                        # This file
+- **Language**: Python 🐍  
+- **Libraries Used**:  
+  - `pandas` – data preprocessing & analysis  
+  - `numpy` – numerical computations  
+  - `matplotlib` / `seaborn` – data visualization  
+  - `scikit-learn` – machine learning models  
+  - `plotly` / `folium` (optional) – interactive visualizations  
+
+---
+
+## 📊 Outcomes  
+
+By integrating **soil** and **weather data**, this project:  
+- Enhances scientific understanding of crop–environment interactions.  
+- Provides practical solutions to improve agricultural productivity.  
+- Serves as a resource for **evidence-based decision-making** in agriculture.  
+
+Ultimately, the study contributes to **food security** and **sustainability** 🌍.  
+
+---
+
+## 🚀 How to Run  
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/your-username/soil-crop-growth-analysis.git
+   cd soil-crop-growth-analysis
